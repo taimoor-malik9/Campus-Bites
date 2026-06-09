@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Your Store"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_orange"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Store Logo Preview -->
+        <ImageView
+            android:id="@+id/ivStoreLogoPreview"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/outline_garage_home_24"
+            android:background="@color/light_gray"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnSelectLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Store Logo"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/text_gray"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etStoreName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Store Name (e.g. ChicMic Cafe)"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etStoreDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Store Description"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:layout_marginBottom="24dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_gray"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Owner Full Name"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email (Login ID)"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register Store"
+            android:backgroundTint="@color/primary_orange"
+            android:textSize="18sp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <!-- ADDED THIS TEXTVIEW BELOW -->
+        <TextView
+            android:id="@+id/tvUploadProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Uploading..."
+            android:textColor="@color/text_gray"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

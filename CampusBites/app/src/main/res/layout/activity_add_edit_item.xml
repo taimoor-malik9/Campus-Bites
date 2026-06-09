@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add/Edit Menu Item"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_orange"
+            android:layout_marginBottom="24dp"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+        <!-- Image Placeholder -->
+        <ImageView
+            android:id="@+id/ivFoodImagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="@color/light_gray"
+            android:src="@drawable/placeholder"
+            android:contentDescription="Food image preview"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnUploadImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Picture"
+            android:backgroundTint="@color/text_gray"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Food Name"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:padding="16dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- NEW: 3 Price Inputs -->
+        <EditText
+            android:id="@+id/etPriceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Small Price"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:padding="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edit_text_background"/>
+
+        <EditText
+            android:id="@+id/etPriceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Medium Price"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:padding="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edit_text_background"/>
+
+        <EditText
+            android:id="@+id/etPriceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Large Price"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:padding="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edit_text_background"/>
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Description"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Item"
+            android:backgroundTint="@color/primary_orange"
+            android:layout_marginTop="32dp"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/primary_orange">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Checkout"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Delivery Info -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Information"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_gray"
+                android:background="@drawable/edit_text_background"
+                android:padding="16dp"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_gray"
+                android:background="@drawable/edit_text_background"
+                android:padding="16dp"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Delivery Address (Optional)"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_gray"
+                android:background="@drawable/edit_text_background"
+                android:padding="16dp"
+                android:layout_marginTop="12dp" />
+
+            <!-- Payment Method -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Method"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="24dp" />
+
+            <RadioGroup
+                android:id="@+id/rgPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cash on Delivery"
+                    android:textColor="@color/black"
+                    android:checked="true"
+                    android:padding="12dp" />
+
+                <RadioButton
+                    android:id="@+id/rbCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Card Payment"
+                    android:textColor="@color/black"
+                    android:padding="12dp" />
+
+                <RadioButton
+                    android:id="@+id/rbJazzCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="JazzCash"
+                    android:textColor="@color/black"
+                    android:padding="12dp" />
+
+                <RadioButton
+                    android:id="@+id/rbEasypaisa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Easypaisa"
+                    android:textColor="@color/black"
+                    android:padding="12dp" />
+
+            </RadioGroup>
+
+            <!-- Order Summary -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Summary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="24dp" />
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store: Store Name"
+                android:textSize="14sp"
+                android:textColor="@color/text_gray"
+                android:layout_marginTop="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOrderSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/tvTotalItems"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Items: 0"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvTotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total: Rs 0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_orange" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Place Order"
+        android:textSize="18sp"
+        android:backgroundTint="@color/primary_orange" />
+
+</LinearLayout>
+

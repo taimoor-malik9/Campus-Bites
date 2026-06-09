@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient">
+
+    <!-- Animated Background Circles -->
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-100dp"
+        android:background="@drawable/splash_gradient"
+        android:alpha="0.3"/>
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginStart="-50dp"
+        android:background="@drawable/splash_gradient"
+        android:alpha="0.2"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <!-- Logo with Shadow -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/ivSplashLogo"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_campus_bites_logo"
+                android:contentDescription="Campus Bites Logo"
+                android:padding="20dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CAMPUS BITES"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:letterSpacing="0.15"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"/>
+
+        <!-- Tagline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Campus Food Companion"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:alpha="0.9"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.05"/>
+
+        <!-- Loading Indicator -->
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:indeterminateTint="@color/white"
+            android:alpha="0.8"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

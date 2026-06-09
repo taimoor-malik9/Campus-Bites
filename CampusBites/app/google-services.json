@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "42400986450",
+    "project_id": "campusbites-3e821",
+    "storage_bucket": "campusbites-3e821.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42400986450:android:7e8eafe27c31a69b5ff68b",
+        "android_client_info": {
+          "package_name": "com.example.campusbites"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42400986450-sje4smk2c4aa7abeevhbsp34lo193oud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.campusbites",
+            "certificate_hash": "5a774c9605b4bf5cc03e64a752cbc969d7c01258"
+          }
+        },
+        {
+          "client_id": "42400986450-vvpm7b81vjrbqdve9u2ka6iq7um6sbv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr-t3ooUlxDgAbESStWkGLNUDubOMK_Kg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42400986450-vvpm7b81vjrbqdve9u2ka6iq7um6sbv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

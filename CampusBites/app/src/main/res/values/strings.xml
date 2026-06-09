@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CampusBites</string>
+    <string name="store_count">%1$d stores</string>
+    <string name="no_stores_matching">No stores found matching \"%1$s\"</string>
+    <string name="no_stores_available">No stores available</string>
+    <string name="failed_to_load_stores">Failed to load stores: %1$s</string>
+</resources>

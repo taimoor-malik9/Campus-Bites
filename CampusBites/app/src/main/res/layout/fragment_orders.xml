@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray">
+
+    <!-- Store Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/primary_orange"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivStoreLogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="12dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orders Management"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:alpha="0.9"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <!-- Optional: Add a filter or refresh button -->
+        <ImageView
+            android:id="@+id/ivRefreshOrders"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_popup_sync"
+            android:tint="@color/white"
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+
+    <!-- Filter Chips (Optional) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:background="@color/white"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/chipAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Orders"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/chip_selected"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/chipPending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/chip_unselected"
+                android:textColor="@color/primary_orange"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/chipPreparing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preparing"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/chip_unselected"
+                android:textColor="@color/primary_orange"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/chipReady"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ready"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/chip_unselected"
+                android:textColor="@color/primary_orange"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/chipDelivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivered"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/chip_unselected"
+                android:textColor="@color/primary_orange"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/layoutNoOrders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            android:tint="@color/light_gray"
+            android:alpha="0.5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No orders yet"
+            android:textSize="18sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orders from customers will appear here"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:alpha="0.7"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- Orders List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOrders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

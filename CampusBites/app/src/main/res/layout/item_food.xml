@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/ivFoodImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:background="@color/light_gray"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tvFoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cheese Burger"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvFoodDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delicious burger with cheese"
+                android:textSize="14sp"
+                android:textColor="@color/text_gray"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <!-- Prices -->
+            <TextView
+                android:id="@+id/tvFoodPriceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Small: ₹0"
+                android:textSize="12sp"
+                android:textColor="@color/text_gray"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/tvFoodPriceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium: ₹0"
+                android:textSize="12sp"
+                android:textColor="@color/primary_orange"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/tvFoodPriceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Large: ₹0"
+                android:textSize="12sp"
+                android:textColor="@color/text_gray"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Edit"
+                android:backgroundTint="@color/primary_orange"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Delete"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray">
+
+    <!-- Store Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/primary_orange"
+        android:gravity="center_vertical"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/ivProfileHeaderLogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="12dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:background="@color/white"
+            android:padding="4dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProfileHeaderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Profile"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manage your store information"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:alpha="0.9"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+        <!-- LOGO SECTION (This was missing) -->
+        <ImageView
+            android:id="@+id/ivProfileLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:background="#EEEEEE"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnChangeLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Logo"
+            android:backgroundTint="@color/text_gray"
+            android:layout_marginBottom="32dp"/>
+        <!-- END LOGO SECTION -->
+
+        <EditText
+            android:id="@+id/etProfileStoreName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Store Name"
+            android:background="@drawable/edit_text_background"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etProfileOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Owner Name"
+            android:background="@drawable/edit_text_background"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etProfileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edit_text_background"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etProfilePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New Password (leave blank to keep current)"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_text_background"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_gray"
+            android:layout_marginBottom="32dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnUpdateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Information"
+            android:backgroundTint="@color/primary_orange"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnDeleteAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Account"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:backgroundTint="@color/text_gray"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
